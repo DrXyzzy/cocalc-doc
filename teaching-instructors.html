@@ -1,0 +1,204 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Instructor Guide &#8212; CoCalc Manual 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating a new course" href="teaching-create-course.html" />
+    <link rel="prev" title="Welcome to CoCalc’s User Manual!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="instructor-guide">
+<h1>Instructor Guide<a class="headerlink" href="#instructor-guide" title="Permalink to this headline">¶</a></h1>
+<p>How to conduct a course on CoCalc.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching-create-course.html">Creating a new course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#creating-the-course-project">Creating the course project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#adding-teaching-assistants-to-the-course">Adding teaching assistants to the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#creating-the-course-file">Creating the course file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#adding-students-to-the-course">Adding students to the course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#what-do-the-students-get">What do the students get?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#upgrading-students">Upgrading students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#upgrading-students-option-1-students-pay">Upgrading students (option 1): Students pay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html#upgrading-students-option-2-teacher-or-institution-pays">Upgrading students (option 2): Teacher or institution pays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teaching-course-management.html">Course Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#creating-a-new-assignment">Creating a new assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#assigning-an-assignment-to-students">Assigning an assignment to students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#peer-grading">Peer Grading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#collecting-assignments-from-students">Collecting assignments from students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#grading">Grading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#exporting-grades">Exporting grades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#returning-an-assignment-to-students">Returning an assignment to students</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html#suggested-course-folder-structure">Suggested course folder structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teaching-interactions.html">Collaboration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teaching-interactions.html#real-time-chatrooms">Real-time chatrooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-interactions.html#live-collaborative-editing">Live collaborative editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-interactions.html#creating-a-shared-project">Creating a shared project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-interactions.html#group-projects">Group Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teaching-tips_and_tricks.html">Tips and tricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#text-fields-generally-support-markdown-and-latex">Text fields generally support markdown and LaTeX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#making-multiple-assignment-folders-quickly">Making multiple assignment folders quickly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#starting-up-everyone-s-project-before-class">Starting up everyone’s project before class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#restarting-a-project">Restarting a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#using-git">Using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html#time-travel-diffs">Time Travel Diffs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/cocalc-doc-logo.svg" alt="Logo"/>
+            </a></p>
+
+
+
+<p class="blurb">CoCalc User Manual</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="caption"><span class="caption-text">Teaching:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instructor Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teaching-create-course.html">Creating a new course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-course-management.html">Course Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-interactions.html">Collaboration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching-tips_and_tricks.html">Tips and tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teaching-students.html">Student Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Features:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex.html">LaTeX Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sagews.html">Sage Worksheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Linux Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frame-editor.html">Frame editor</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Platform:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-guide.html">Purchasing Upgrades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project-settings.html">Project settings</a></li>
+</ul>
+
+
+<br/>
+<hr/>
+<p class="caption">Links:</p>
+<ul>
+    
+    <li class="toctree-l1"><a href="https://cocalc.com/">CoCalc</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/sagemathinc/cocalc/wiki">Wiki</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to CoCalc’s User Manual!</a></li>
+      <li>Next: <a href="teaching-create-course.html" title="next chapter">Creating a new course</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Sagemath, Inc..
+      
+      |
+      <a href="_sources/teaching-instructors.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/sagemathinc/cocalc-doc" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34321400-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

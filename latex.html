@@ -1,0 +1,346 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LaTeX Editor &#8212; CoCalc Manual 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sage Worksheets" href="sagews.html" />
+    <link rel="prev" title="Jupyter Notebooks" href="jupyter.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="latex-editor">
+<h1><a class="toc-backref" href="#id1">LaTeX Editor</a><a class="headerlink" href="#latex-editor" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.latex-project.org/">LaTeX</a> is a sophisticated markup language and processor for typesetting documents.
+For a general introduction, read this <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX">LaTeX wiki book</a> or any other resource.</p>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#latex-editor" id="id1">LaTeX Editor</a><ul>
+<li><a class="reference internal" href="#getting-started" id="id2">Getting started</a></li>
+<li><a class="reference internal" href="#latex-101" id="id3">LaTeX 101</a></li>
+<li><a class="reference internal" href="#features" id="id4">Features</a></li>
+<li><a class="reference internal" href="#latex-engines" id="id5">LaTeX Engines</a></li>
+<li><a class="reference internal" href="#encoding" id="id6">Encoding</a></li>
+<li><a class="reference internal" href="#faq" id="id7">FAQ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="getting-started">
+<h2><a class="toc-backref" href="#id2">Getting started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>To use the LaTeX editor, open or create a file whose name ends in <code class="docutils literal notranslate"><span class="pre">.tex</span></code>. By default, you should see an editor similar to the one in the screenshot below:</p>
+<a class="reference internal image-reference" href="_images/latex-ui.png"><img alt="_images/latex-ui.png" src="_images/latex-ui.png" style="width: 100%;" /></a>
+<p><strong>Building</strong> In general, you edit source code and compile it to a PDF document. Click the “Build” button (or hit shift+enter or alt+t) to build the tex file and produce a PDF.  You can also check “Build on save: build LaTex file whenever it is saved to disk” in account preferences, and a build will be triggered whenever your file is saved to disk.</p>
+<p><strong>Interface</strong> In the initial screen layout, the source is on the left and a preview of the compiled PDF is on the right.  Also, there are frames showing issues, warnings, errors, and the build log.  You can close any of these panels by clicking the x in the upper right of the panel.  You can also split them as much as you want, and change what is displayed in any panel.  If you close all the panels, the default layout is restored.</p>
+<ul class="simple">
+<li>The <strong>PDF Preview</strong> shows the PDF document.<ul>
+<li>You can easily position the preview by using the mouse to drag the preview around.</li>
+<li>There are buttons  for zooming, and expanding to the vertical and horizontal height.</li>
+<li>There are also buttons for printing and downloading the PDF.</li>
+</ul>
+</li>
+<li><strong>Errors and Warnings</strong><ul>
+<li>The <strong>Errors and Warnings</strong> frame lists all compilation errors and warnings, and other issues.
+Click on the line number link to jump to the corresponding line in the input code on the left and the preview on the right.
+<strong>LaTeX may fail to compile</strong> (or only partially or in a wrong way) <strong>if there are many errors</strong>.</li>
+</ul>
+</li>
+<li>The <strong>PDF - Native</strong> view (not shown by default) shows you an embedded view of the compiled PDF file, using   your browsers native PDF view. This might be broken if your browser has problems rendering the file inline – use the “PDF Preview” view instead.  Also, you can’t double click on the Native view to move back to jump   to the corresponding tex.</li>
+<li>The <strong>Build Control</strong> view gives you more control over how the compilation process works:<ul>
+<li>You can click in the build command line and edit it however you want, or select a different engine from the dropdown menu.
+By default, we compile using <a class="reference external" href="https://www.ctan.org/pkg/latexmk/">LatexMK</a>, which manages temporary files and BibTeX.</li>
+<li>Click <strong>Clean</strong> to delete autogenerated temporary files.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="latex-101">
+<h2><a class="toc-backref" href="#id3">LaTeX 101</a><a class="headerlink" href="#latex-101" title="Permalink to this headline">¶</a></h2>
+<p>It is very easy to start with LaTeX.
+CoCalc guides your first document with a small default template.
+You start working between the <code class="docutils literal notranslate"><span class="pre">\begin{document}</span> <span class="pre">...</span> <span class="pre">\end{document}</span></code> instructions.
+Everything before <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> is called the “preamble” and contains the configuration for the document.</p>
+<p>For example, remove the <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code> instruction and replace it by</p>
+<p>&gt; <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">\textbf{CoCalc}!</span> <span class="pre">This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">formula:</span> <span class="pre">$\frac{1}{1+x^2}$.</span></code></p>
+<p>After saving (<code class="docutils literal notranslate"><span class="pre">[CTRL]</span></code> + <code class="docutils literal notranslate"><span class="pre">[s]</span></code> or click the green <code class="docutils literal notranslate"><span class="pre">Save</span></code> button at upper left), the file will build, and
+you should see an updated PDF preview.</p>
+<ul class="simple">
+<li><strong>New paragraphs</strong>: Single returns for new lines do not have any effect.
+Use them to keep new sentences in paragraphs at the beginning of a line for better overview.
+Two or more returns introduce a new paragraph.</li>
+<li><strong>Formulas</strong>: They’re either between <code class="docutils literal notranslate"><span class="pre">$</span></code> or <code class="docutils literal notranslate"><span class="pre">$$</span></code>, or in <code class="docutils literal notranslate"><span class="pre">\begin{equation}...\end{equation}</span></code> environments.</li>
+</ul>
+<p>You can also <strong>import your existing documents</strong> by
+<a class="reference external" href="https://github.com/sagemathinc/cocalc/wiki/upload">uploading in “Files”</a> or <a class="reference external" href="https://github.com/sagemathinc/cocalc/wiki/Importing-Files-from-ShareLaTeX">importing from ShareLatex/Overleaf</a>.</p>
+</div>
+<div class="section" id="features">
+<h2><a class="toc-backref" href="#id4">Features</a><a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="forward-inverse-search">
+<span id="latex-forward-inverse"></span><h3>Forward &amp; Inverse Search<a class="headerlink" href="#forward-inverse-search" title="Permalink to this headline">¶</a></h3>
+<p>Forward and inverse search are extremely helpful for navigating in a larger document.</p>
+<p><strong>Forward</strong>: place your cursor at a specific location in the editor on the left-hand side.
+Click the “Forward” button or the <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[Return]</span></code> keyboard shortcut to jump to the corresponding
+location in the PDF preview.
+(In rare cases where full positional information is not available, this feature may not be active.)</p>
+<p><strong>Inverse</strong>: Double-click on an area of interest in the <strong>PDF Preview</strong> area.
+The cursor in the text editor will jump to the paragraph in the source-code.</p>
+</div>
+<div class="section" id="spellcheck">
+<span id="latex-spellcheck"></span><h3>Spellcheck<a class="headerlink" href="#spellcheck" title="Permalink to this headline">¶</a></h3>
+<p>Spell checking during LaTeX editing is available for several languages. You can enable/disable Spellcheck and change the language <em>for a particular file</em> by opening the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> frame as shown:</p>
+<a class="reference internal image-reference" href="_images/latex-spellcheck123.jpg"><img alt="_images/latex-spellcheck123.jpg" src="_images/latex-spellcheck123.jpg" style="width: 50%;" /></a>
+<p>Note that the Spellcheck feature is also available in Markdown and HTML editors.</p>
+</div>
+<div class="section" id="word-count">
+<span id="latex-word-count"></span><h3>Word count<a class="headerlink" href="#word-count" title="Permalink to this headline">¶</a></h3>
+<p>CoCalc can show you current word count statistics generated by <a class="reference external" href="http://app.uio.no/ifi/texcount/whatitdoes.html">texcount</a>.
+In order to see them, change one of the frames or created a new one in the <a class="reference internal" href="frame-editor.html"><span class="doc">Frame editor</span></a>.
+Select <strong>“Word Count”</strong> as shown below:</p>
+<a class="reference internal image-reference" href="_images/latex-word-count.png"><img alt="_images/latex-word-count.png" src="_images/latex-word-count.png" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="section" id="latex-engines">
+<h2><a class="toc-backref" href="#id5">LaTeX Engines</a><a class="headerlink" href="#latex-engines" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>latexmk</strong> + <strong>PDFlatex</strong>: the default configuration, works in most cases</li>
+<li><strong>latexmk</strong> + <strong>XeLaTeX</strong>: this is useful for foreign languages with many special characters.</li>
+<li><strong>latexmk</strong> + <strong>LuaTex</strong>: uses the <a class="reference external" href="http://www.luatex.org">LuaLaTeX</a> engine.</li>
+</ul>
+</div>
+<div class="section" id="encoding">
+<h2><a class="toc-backref" href="#id6">Encoding</a><a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<p><strong>UTF8</strong>: the build process runs in a Linux environment.
+All edited documents are assumed to be encoded as UTF-8.
+Therefore, depending if you compile via PDFLaTeX or XeLaTeX, the following encoding defintions are the preferred choices:</p>
+<ul>
+<li><p class="first">PDFLaTeX:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">usepackage</span><span class="p">[</span><span class="n">T1</span><span class="p">]{</span><span class="n">fontenc</span><span class="p">}</span>
+\<span class="n">usepackage</span><span class="p">[</span><span class="n">utf8</span><span class="p">]{</span><span class="n">inputenc</span><span class="p">}</span>
+\<span class="n">usepackage</span><span class="p">{</span><span class="n">lmodern</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">XeLaTeX or LuaTeX:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">usepackage</span><span class="p">{</span><span class="n">fontspec</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The default template already selects the correct configuration for you.</p>
+</div>
+<div class="section" id="faq">
+<h2><a class="toc-backref" href="#id7">FAQ</a><a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-insert-an-image">
+<h3>How to insert an image?<a class="headerlink" href="#how-to-insert-an-image" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Upload a PNG or PDF file via CoCalc’s “Files” interface.
+The uploaded image should be in the same directory as the <code class="docutils literal notranslate"><span class="pre">.tex</span></code> file
+Otherwise, use relative paths like <code class="docutils literal notranslate"><span class="pre">./images/filename.png</span></code> if it is in a subdirectory <code class="docutils literal notranslate"><span class="pre">images</span></code>.</li>
+<li>Follow  <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions">these instructions</a>  about how to insert a graphic in a figure environment.
+Do not forget <code class="docutils literal notranslate"><span class="pre">\usepackage{graphicx}</span></code> in the preamble declaration.</li>
+</ol>
+</div>
+<div class="section" id="how-to-insert-a-backslash-or-dollar-sign">
+<h3>How to insert a backslash or dollar sign?<a class="headerlink" href="#how-to-insert-a-backslash-or-dollar-sign" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\</span></code> character has a special meaning.
+It signals a LaTeX command or is used as an escape character.
+To enter a backslash, escape its meaning by entering it twice: <code class="docutils literal notranslate"><span class="pre">\\</span></code>.</p>
+<p>A dollar sign is entered as <code class="docutils literal notranslate"><span class="pre">\$</span></code>, which escapes the meaning of “formula-start”.</p>
+</div>
+<div class="section" id="what-to-do-if-the-preview-does-not-update">
+<h3>What to do if the preview does not update<a class="headerlink" href="#what-to-do-if-the-preview-does-not-update" title="Permalink to this headline">¶</a></h3>
+<p>Possible reasons:</p>
+<ol class="arabic simple">
+<li>Are there any errors in the “Issues” tab? LaTeX only compiles well if there are zero reported errors.</li>
+<li>Long documents could take an extended period of time to complete. In the “Preview” tab, disable the preview and only enable it once to avoid piling up too much work on the back-end.</li>
+<li>Similarly, computational-heavy “SageTeX” computations could lead to excessive compilation times.
+You can pre-compute results or split the document into smaller parts.</li>
+</ol>
+</div>
+<div class="section" id="how-to-deal-with-large-documents-across-multiple-source-files">
+<h3>How to deal with large documents across multiple source files?<a class="headerlink" href="#how-to-deal-with-large-documents-across-multiple-source-files" title="Permalink to this headline">¶</a></h3>
+<p>The best way is to use the <a class="reference external" href="https://www.ctan.org/pkg/subfiles?lang=en">subfiles</a> package as
+<a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">described here</a>.
+There is an extended example demonstrating how this works in the CoCalc Library. Click (+)New and look for Library in the middle of the page, then under <code class="docutils literal notranslate"><span class="pre">LaTeX</span> <span class="pre">templates</span></code> select <code class="docutils literal notranslate"><span class="pre">Multiple</span> <span class="pre">source</span> <span class="pre">files</span> <span class="pre">in</span> <span class="pre">CoCalc</span></code>. The same example is also available at
+<cite>cloud-examples/latex/multiple-files</cite>.</p>
+</div>
+<div class="section" id="how-to-use-pstricks-macros">
+<h3>How to use PSTricks macros?<a class="headerlink" href="#how-to-use-pstricks-macros" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://tug.org/PSTricks/main.cgi">PSTricks</a> is a set of macros for including PostScript drawings in a TeX document. The website has an extensive <a class="reference external" href="http://tug.org/PSTricks/main.cgi?file=examples">gallery of examples</a>.
+The main thing to remember when using PSTricks is to set <code class="docutils literal notranslate"><span class="pre">Engine</span></code> in the CoCalc Build panel to <code class="docutils literal notranslate"><span class="pre">XeLaTeX</span></code> as in this small demo <a class="reference external" href="https://cocalc.com/share/db982efa-e439-4e2d-933b-7c7011c6b21a/Public/pstricks-demo.tex?viewer=share">.tex file</a> and <a class="reference external" href="https://cocalc.com/share/db982efa-e439-4e2d-933b-7c7011c6b21a/Public/pstricks-demo.pdf?viewer=share">resulting .pdf</a>.</p>
+<a class="reference internal image-reference" href="_images/latex-pstricks-demo3.png"><img alt="_images/latex-pstricks-demo3.png" src="_images/latex-pstricks-demo3.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="_images/latex-pstricks-demo4.png"><img alt="_images/latex-pstricks-demo4.png" src="_images/latex-pstricks-demo4.png" style="width: 40%;" /></a>
+</div>
+<div class="section" id="setup-texmf-in-a-project">
+<h3>Setup <code class="docutils literal notranslate"><span class="pre">texmf</span></code> in a project?<a class="headerlink" href="#setup-texmf-in-a-project" title="Permalink to this headline">¶</a></h3>
+<p>A CoCalc project is equivalent to a linux user account.
+Therefore, the texmf discovery mechanism works the same as on a local machine.
+By default, you should be able to put your own packages and styles into <code class="docutils literal notranslate"><span class="pre">~/texmf</span></code>.
+Afterwards, you might have to run run <code class="docutils literal notranslate"><span class="pre">texhash</span> <span class="pre">~/texmf</span></code> in a terminal or the little “Terminal command” textbox in “Files”.</p>
+<p>Note: the <code class="docutils literal notranslate"><span class="pre">~</span></code> stands for the <code class="docutils literal notranslate"><span class="pre">HOME</span></code> directory, which is the root directory you see in the “Files”-listing.
+You can click the home icon to jump into the home directory.
+<code class="docutils literal notranslate"><span class="pre">texmf</span></code> is a subdirectory right there.</p>
+</div>
+<div class="section" id="is-there-a-way-to-turn-off-automatic-build-and-pdf-preview-while-i-m-working-on-sub-documents">
+<h3>Is there a way to turn off automatic build and PDF preview while I’m working on sub documents?<a class="headerlink" href="#is-there-a-way-to-turn-off-automatic-build-and-pdf-preview-while-i-m-working-on-sub-documents" title="Permalink to this headline">¶</a></h3>
+<p>If you’re working on a main LaTeX document that has included tex files, you may want to turn off compilation of the individual subfiles. Here are some steps you can take:</p>
+<ul class="simple">
+<li>By default, building latex documents on saving is enabled. You can disable it under <code class="docutils literal notranslate"><span class="pre">Account</span></code> → <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> → <code class="docutils literal notranslate"><span class="pre">Editor</span> <span class="pre">settings</span></code> by removing the check mark for <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">on</span> <span class="pre">save:</span> <span class="pre">build</span> <span class="pre">LaTex</span> <span class="pre">file</span> <span class="pre">whenever</span> <span class="pre">it</span> <span class="pre">is</span> <span class="pre">saved</span> <span class="pre">to</span> <span class="pre">disk</span></code>.</li>
+<li>You can also disable the build process by opening the “Build” dialog and entering <code class="docutils literal notranslate"><span class="pre">echo</span></code> in the line where the command is. That just does nothing when it tries to build.</li>
+<li>If you like, you could also structure your LaTeX in such a way that subdocuments also build via the <a class="reference external" href="https://ctan.org/pkg/subfiles">CTAN subfiles</a> package.
+You can find an example in the CoCalc Library. In a project, click on <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">New</span></code>, and in the middle you will find the Library. Look under <code class="docutils literal notranslate"><span class="pre">LaTeX</span> <span class="pre">templates</span></code> → <code class="docutils literal notranslate"><span class="pre">Multiple</span> <span class="pre">source</span> <span class="pre">files</span> <span class="pre">in</span> <span class="pre">CoCalc</span></code>.</li>
+</ul>
+<p>In general, multifile LaTeX editing is on our radar, but we haven’t got to that yet: <a class="reference external" href="https://github.com/sagemathinc/cocalc/issues/904">CoCalc issue #904</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/cocalc-doc-logo.svg" alt="Logo"/>
+            </a></p>
+
+
+
+<p class="blurb">CoCalc User Manual</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="caption"><span class="caption-text">Teaching:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching-instructors.html">Instructor Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching-students.html">Student Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Features:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LaTeX Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latex-101">LaTeX 101</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latex-engines">LaTeX Engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#encoding">Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sagews.html">Sage Worksheets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Linux Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frame-editor.html">Frame editor</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Platform:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-guide.html">Purchasing Upgrades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project-settings.html">Project settings</a></li>
+</ul>
+
+
+<br/>
+<hr/>
+<p class="caption">Links:</p>
+<ul>
+    
+    <li class="toctree-l1"><a href="https://cocalc.com/">CoCalc</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/sagemathinc/cocalc/wiki">Wiki</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="jupyter.html" title="previous chapter">Jupyter Notebooks</a></li>
+      <li>Next: <a href="sagews.html" title="next chapter">Sage Worksheets</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Sagemath, Inc..
+      
+      |
+      <a href="_sources/latex.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/sagemathinc/cocalc-doc" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34321400-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
